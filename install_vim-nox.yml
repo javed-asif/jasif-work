@@ -1,0 +1,32 @@
+---
+
+- hosts: jenkinsServer
+  become: true
+#  become_user: jenkins
+  tasks:
+  - name : install vim-nox on Jenkins Server
+    vars:
+       ansible_python_interpreter: /usr/bin/python3
+    yum:
+      name:
+#       -  python3-apt
+       -  httpd
+- hosts: liquibaseServer
+  become: true
+#  become_user: ubuntu
+  tasks:
+  - name : install vim-nox on Liquibase Server
+    apt:
+      name: vim-nox
+- hosts: AngularServer
+  become: true
+#  become_user: javed
+#  become_method: sudo
+  tasks:
+#  - name: Update package list
+#    apt:
+#      update_cache: yes
+  - name : install vim-nox on Angular Server
+    apt:
+      name: vim-nox
+
