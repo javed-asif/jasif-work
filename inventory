@@ -1,4 +1,8 @@
-[servers]
-jenkinsServer ansible_host=192.168.99.114 ansible_connection=ssh ansible_user=jenkins
-liquibaseServer ansible_host=192.168.99.116 ansible_connection=ssh ansible_user=ubuntu
+[web_servers]
 AngularServer ansible_host=192.168.99.120 ansible_connection=ssh ansible_user=javed
+
+[db_servers]
+liquibaseServer ansible_host=192.168.99.116 ansible_connection=ssh ansible_user=ubuntu
+
+[file_servers]
+jenkinsServer ansible_host=192.168.99.114 ansible_connection=ssh ansible_user=jenkins
